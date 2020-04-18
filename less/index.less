@@ -58,7 +58,7 @@ html, body {
 }
 
 // ----------------END OF CSS RESET---------------------
-//    border: 2px solid red;
+
 
 // VARIABLES-------------
 @doc-font-color: #484848; //needed for inheritance issues
@@ -215,6 +215,8 @@ header {
 // --------------------------------------------------
 
 .work-history {
+	margin-bottom: 2em;
+
 	h3 {
 		.h3-styling();
 	}
@@ -235,3 +237,18 @@ header {
 
 // --------------------- FOOTER ---------------------
 // --------------------------------------------------
+
+footer {
+	background-color: fadeout(@doc-font-color, 50%);
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+
+	p {
+		text-align: center;
+		font-size: 1.3rem;
+		font-weight: 700;
+		text-shadow: -1px 1px 5px fadeout( #484848, 50%);
+		color: #c0dfd9;
+		padding: 2em 0;
+	}
+}

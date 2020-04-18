@@ -237,6 +237,9 @@ header {
 .bio-section .tech-skills li:last-child {
   border: 0.5px solid #c0dfd9;
 }
+.work-history {
+  margin-bottom: 2em;
+}
 .work-history h3 {
   font-size: 2rem;
   font-weight: 700;
@@ -254,4 +257,17 @@ header {
 }
 .work-history tr:nth-child(even) {
   background-color: #c0dfd9;
+}
+footer {
+  background-color: rgba(72, 72, 72, 0.5);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+footer p {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-shadow: -1px 1px 5px rgba(72, 72, 72, 0.5);
+  color: #c0dfd9;
+  padding: 2em 0;
 }
