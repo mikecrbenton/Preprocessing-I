@@ -134,3 +134,124 @@ html,
 body {
   height: 100%;
 }
+body {
+  font-family: 'Lato', sans-serif;
+  color: #484848;
+  margin: 1.5em 3em 0 3em;
+}
+header {
+  margin-bottom: 1.5em;
+}
+.nav-list {
+  display: flex;
+  justify-content: flex-end;
+}
+.nav-list li a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 900;
+  padding: 0 0 0 1em;
+  color: #484848;
+}
+.nav-list li a:hover {
+  color: rgba(72, 72, 72, 0.5);
+}
+.nav-list li a:active {
+  color: #c0dfd9;
+}
+.main-section {
+  background-color: #c0dfd9;
+  box-shadow: 0px 1px 3px #484848;
+  padding: 4em;
+  border-radius: 1%;
+}
+.main-section img {
+  width: 40%;
+  border-radius: 2%;
+  box-shadow: 0px 1px 3px #484848;
+}
+.main-section h1 {
+  font-size: 3rem;
+  margin: 0.5em 0 0.1em;
+}
+.main-section .sub-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-left: 0.2em;
+  margin-bottom: 1em;
+}
+.main-section .brief-info {
+  font-size: 1.2rem;
+  margin-bottom: 2em;
+}
+.main-section a {
+  border: 5px solid #484848;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 900;
+  font-weight: 700;
+  color: #484848;
+  padding: 0.2em 0.8em;
+}
+.main-section a:hover {
+  color: rgba(72, 72, 72, 0.5);
+  border: 5px solid #b3c2bf;
+}
+.main-section a:active {
+  background: #b3c2bf;
+  color: white;
+}
+.bio-section {
+  display: flex;
+  justify-content: space-between;
+  margin: 2em 0;
+}
+.bio-section .caption {
+  width: 57%;
+}
+.bio-section .caption h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5em;
+}
+.bio-section .caption p {
+  font-size: 1.1rem;
+  font-weight: 300;
+  line-height: 1.5rem;
+  letter-spacing: 1px;
+}
+.bio-section .tech-skills {
+  width: 37%;
+}
+.bio-section .tech-skills h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5em;
+}
+.bio-section .tech-skills li {
+  border: 0.5px solid #c0dfd9;
+  font-weight: 700;
+  border-bottom: 0;
+  padding: 0.5em;
+}
+.bio-section .tech-skills li:last-child {
+  border: 0.5px solid #c0dfd9;
+}
+.work-history h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5em;
+}
+.work-history table {
+  border-collapse: collapse;
+  font-size: 1.3rem;
+  width: 100%;
+}
+.work-history th,
+.work-history td {
+  text-align: left;
+  padding: 8px;
+}
+.work-history tr:nth-child(even) {
+  background-color: #c0dfd9;
+}

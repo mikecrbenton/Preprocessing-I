@@ -54,7 +54,184 @@ table {
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
+}
+
+// ----------------END OF CSS RESET---------------------
+//    border: 2px solid red;
+
+// VARIABLES-------------
+@doc-font-color: #484848; //needed for inheritance issues
+@color-background: #c0dfd9;
+@img-radius: 2%;
+@global-shadow: 0px 1px 3px #484848;
+
+// MIXINS------------------
+
+.h3-styling() {
+	font-size: 2rem;
+	font-weight: 700;
+	margin-bottom: .5em;
+}
+
+.nav-styles() {
+	text-decoration: none;
+	font-size: 1.5rem;
+	font-weight: 900;
+}
+
+.button-styles() {
+	border: 5px solid #484848;
+
+	&:hover {
+		color: fadeout(@doc-font-color, 50%);
+		border: 5px solid #b3c2bf;
+	}
+
+	&:active {
+		background: #b3c2bf;
+		color: white;
+	}
+}
+
+// GLOBAL STYLES------------
+
+body {
+	font-family: 'Lato', sans-serif;
+	color: #484848;
+	margin: 1.5em 3em 0 3em;
+}
+
+// ----------------- HEADER -------------------
+// --------------------------------------------
+
+header {
+	 margin-bottom: 1.5em;
+}
+
+.nav-list{
+	display: flex;
+	justify-content: flex-end;
+
+		li {
+
+			a {
+				.nav-styles(); //MIXIN
+				padding: 0 0 0 1em;
+				color: @doc-font-color;
+
+				&:hover {
+					color: fadeout(@doc-font-color, 50%);
+				}
+
+				&:active {
+					color: @color-background;
+				}
+			}
+			
+		}
+	
+}
+
+// ----------------- MAIN SECTION -------------------
+// --------------------------------------------------
+
+.main-section {
+	background-color: @color-background;
+	box-shadow: @global-shadow;
+	padding: 4em;
+	border-radius: 1%;
+	img {
+		width: 40%;
+		border-radius: @img-radius;
+		box-shadow: @global-shadow;
+	}
+	h1 {
+		font-size: 3rem;
+		margin: .5em 0 .1em;
+	}
+	.sub-title {
+		font-size: 1.2rem;
+		font-weight: 700;
+		margin-left: .2em;
+		margin-bottom: 1em;
+	}
+	.brief-info {
+		font-size: 1.2rem;
+		margin-bottom: 2em;
+	}
+	a {
+		.button-styles(); //MIXIN
+		.nav-styles(); //MIXIN
+		font-weight: 700; //OVERRIDE MIXIN
+		color: @doc-font-color;
+		padding: .2em .8em;
+	}
+}
+
+// ----------------- BIO SECTION --------------------
+// --------------------------------------------------
+
+.bio-section {
+	display: flex;
+	justify-content: space-between;
+	margin: 2em 0;
+
+	.caption {
+		width: 57%;
+
+		h3 {
+			.h3-styling();
+		}
+		p {
+			font-size: 1.1rem;
+			font-weight: 300;
+			line-height: 1.5rem;
+			letter-spacing: 1px;
+		}
+	}
+
+	.tech-skills {
+		width: 37%;
+
+		h3 {
+			.h3-styling();
+		}
+		li {
+			border: .5px solid #c0dfd9;
+			font-weight: 700;
+			border-bottom: 0;
+			padding: .5em;
+
+			&:last-child {
+				border: .5px solid #c0dfd9;
+			}
+		}
+	}
 }
 
 
+// ------------WORK HISTORY SECTION -----------------
+// --------------------------------------------------
+
+.work-history {
+	h3 {
+		.h3-styling();
+	}
+	table {
+		border-collapse: collapse;
+		font-size: 1.3rem;
+		width: 100%;
+	  }
+	  th, td {
+		text-align: left;
+		padding: 8px;
+	  }
+	  tr:nth-child(even) {
+		  background-color: #c0dfd9;
+	  }
+}
+
+
+// --------------------- FOOTER ---------------------
+// --------------------------------------------------
