@@ -133,6 +133,7 @@ table {
 html,
 body {
   height: 100%;
+  background-color: whitesmoke;
 }
 body {
   font-family: 'Lato', sans-serif;
@@ -207,9 +208,19 @@ header {
   margin-left: 0.2em;
   margin-bottom: 1em;
 }
+@media (max-width: 500px) {
+  .main-section .sub-title {
+    font-size: 1.5rem;
+  }
+}
 .main-section .brief-info {
   font-size: 1.2rem;
   margin-bottom: 2em;
+}
+@media (max-width: 500px) {
+  .main-section .brief-info {
+    font-size: 1.5rem;
+  }
 }
 .main-section a {
   border: 5px solid #484848;
@@ -252,6 +263,19 @@ header {
   line-height: 1.5rem;
   letter-spacing: 1px;
 }
+@media (max-width: 500px) {
+  .bio-section .caption p {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    letter-spacing: 2px;
+    margin-bottom: 1em;
+  }
+}
+@media (max-width: 500px) {
+  .bio-section .caption {
+    width: 100%;
+  }
+}
 .bio-section .tech-skills {
   width: 37%;
 }
@@ -260,14 +284,29 @@ header {
   font-weight: 700;
   margin-bottom: 0.5em;
 }
-.bio-section .tech-skills li {
+.bio-section .tech-skills ul li {
   border: 0.5px solid #c0dfd9;
   font-weight: 700;
   border-bottom: 0;
   padding: 0.5em;
 }
-.bio-section .tech-skills li:last-child {
+.bio-section .tech-skills ul li:last-child {
   border: 0.5px solid #c0dfd9;
+}
+@media (max-width: 500px) {
+  .bio-section .tech-skills ul li {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 500px) {
+  .bio-section .tech-skills {
+    width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  .bio-section {
+    flex-direction: column;
+  }
 }
 .work-history {
   margin-bottom: 2em;
@@ -302,4 +341,9 @@ footer p {
   text-shadow: -1px 1px 5px rgba(72, 72, 72, 0.5);
   color: #c0dfd9;
   padding: 2em 0;
+}
+@media (max-width: 500px) {
+  footer {
+    width: 100%;
+  }
 }
